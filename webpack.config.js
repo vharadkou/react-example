@@ -1,6 +1,7 @@
-let HtmlWebpackPlugin = require('html-webpack-plugin');
-let path = require('path');
 let webpack = require('webpack');
+let path = require('path');
+
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -31,12 +32,11 @@ module.exports = {
             names: [
                 'main',
                 'vendor',
-
                 'manifest'
             ]
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        }),
+        })
     ]
 };
