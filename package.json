@@ -19,7 +19,12 @@
     "awesome-typescript-loader": "^3.3.0",
     "babel-loader": "^7.1.0",
     "html-webpack-plugin": "^2.30.0",
+    "install": "^0.10.1",
+    "npm": "^5.5.1",
     "source-map-loader": "^0.2.0",
+    "tslint": "^5.8.0",
+    "tslint-loader": "^3.5.3",
+    "tslint-react": "^3.2.0",
     "typescript": "^2.6.1",
     "webpack": "^3.8.0",
     "webpack-dev-server": "^2.9.4"
