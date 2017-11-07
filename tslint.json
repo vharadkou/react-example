@@ -4,6 +4,8 @@
     ],
     "defaultSeverity": "warning",
     "rules": {
+        "jsx-no-bind": false,
+        "jsx-no-lambda": false,
         "align": [
             true,
             "parameters",

@@ -1,7 +1,8 @@
-let webpack = require('webpack');
-let path = require('path');
+const webpack = require('webpack');
+const path = require('path');
 
-let HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -37,7 +38,13 @@ module.exports = {
                 }
             },
             { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
-            { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }
+            { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    use: ['css-loader']
+                })
+            }
         ]
     },
 
@@ -51,6 +58,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        })
+        }),
+        new ExtractTextPlugin('style.css')
     ],
 };

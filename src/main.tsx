@@ -1,11 +1,21 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { Hello } from './components/Hello';
+import './main.css';
+
+import {
+    Hello,
+    Sidebar
+} from './components';
 
 ReactDOM.render(
-    <div className="qwe">
-        <Hello compiler="TypeScript" framework="React" />
+    <div>
+        <div className="rap-sidebar">
+            <Sidebar />
+        </div>
+        <div className="rap-content">
+            <Hello compiler="TypeScript" framework="React" />
+        </div>
     </div>,
     document.getElementById('example'),
 );

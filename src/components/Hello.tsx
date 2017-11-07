@@ -5,13 +5,8 @@ export interface IHelloProps {
     framework: string;
 }
 
-export class Hello extends React.Component<IHelloProps, undefined> {
-
-    private qwe() {
-
-    }
-
+export class Hello extends React.Component<IHelloProps> {
     public render(): JSX.Element {
-        return <h1>Hello from {this.props.compiler} and {this.props.framework}!</h1>;
+        return <span>Hello from {this.props.compiler} and {this.props.framework}!</span>;
     }
 }
